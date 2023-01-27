@@ -4,6 +4,8 @@
   "private": true,
   "moduleResolution": "node",
   "scripts": {
+    "runDev" : "npm run dev",
+    "runSSLDev" : "node server.js",
     "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start",
@@ -29,7 +31,7 @@
     "@reduxjs/toolkit": "^1.8.6",
     "@types/node": "^18.11.0",
     "@types/react": "^18.0.21",
-    "eslint": "8.20.0",
+    "eslint": "^8.20.0",
     "eslint-config-next": "12.2.3",
     "reactcss": "^1.2.3",
     "tinycolor2": "^1.4.2",
