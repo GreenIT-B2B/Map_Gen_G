@@ -6,7 +6,7 @@
   "scripts": {
     "runDev" : "npm run dev",
     "runSSLDev" : "node server.js",
-    "dev": "next dev -p 3000",
+    "dev": "next dev -p 3030",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
