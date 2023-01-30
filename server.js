@@ -24,9 +24,13 @@ app.prepare().then(() => {
 
   const https = require("https");
   const fs = require("fs");
+  // const options = {
+  //   key: fs.readFileSync("localhost+1-key.pem"),
+  //   cert: fs.readFileSync("localhost+1.pem"),
+  // };
   const options = {
-    key: fs.readFileSync("localhost+1-key.pem"),
-    cert: fs.readFileSync("localhost+1.pem"),
+    key: fs.readFileSync("/etc/letsencrypt/live/greenit.cf/privkey.pem"),
+    cert: fs.readFileSync("/etc/letsencrypt/live/greenit.cf/fullchain.pem"),
   };
   https
   .createServer(options, function (req, res) {
