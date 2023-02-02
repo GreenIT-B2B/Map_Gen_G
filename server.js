@@ -6,7 +6,7 @@ const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-const PORT = 3000;
+const PORT = 3030;
 
 app.prepare().then(() => {
   http
@@ -24,14 +24,14 @@ app.prepare().then(() => {
 
   const https = require("https");
   const fs = require("fs");
-  // const options = {
-  //   key: fs.readFileSync("localhost+1-key.pem"),
-  //   cert: fs.readFileSync("localhost+1.pem"),
-  // };
   const options = {
-    key: fs.readFileSync("/etc/letsencrypt/live/greenit.cf/privkey.pem"),
-    cert: fs.readFileSync("/etc/letsencrypt/live/greenit.cf/fullchain.pem"),
+    key: fs.readFileSync("localhost+1-key.pem"),
+    cert: fs.readFileSync("localhost+1.pem"),
   };
+  // const options = {
+  //   key: fs.readFileSync("/etc/letsencrypt/live/greenit.cf/privkey.pem"),
+  //   cert: fs.readFileSync("/etc/letsencrypt/live/greenit.cf/fullchain.pem"),
+  // };
   https
   .createServer(options, function (req, res) {
     // Be sure to pass `true` as the second argument to `url.parse`.
