@@ -11,11 +11,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Provider store={store}>
-        <div style={{ width: 1000, margin: "0 auto" }}>
+        {/*<div style={{ width: 1000, margin: "0 auto" }}>*/}
           {/*<Top />*/}
           <Component {...pageProps} />
           {/*<Footer />*/}
-        </div>
+        {/*</div>*/}
       </Provider>
     </>
   );
