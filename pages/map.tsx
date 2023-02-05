@@ -18,7 +18,7 @@ import {
   makeLineToRect,
   newGeoOnLine,
 } from "../src/component/map/GeoMath";
-import { KeybCtrlParam, UiCtrlParam, MapInfo, CrsDrawInfo, HoleDrawInfo, HoleData, PinData, IpData } from "./types";
+import { KeybCtrlParam, UiCtrlParam, MapInfo, CrsDrawInfo, HoleDrawInfo, HoleData, PinData, IpData } from "../types/types";
 import {
   convGeos2LatLngs,
   convLatLngs2Geos,
