@@ -12,9 +12,9 @@ function MyApp({ Component, pageProps }) {
     <>
       <Provider store={store}>
         <div style={{ width: 1000, margin: "0 auto" }}>
-          <Top />
+          {/*<Top />*/}
           <Component {...pageProps} />
-          <Footer />
+          {/*<Footer />*/}
         </div>
       </Provider>
     </>
