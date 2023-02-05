@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
+  distDir: process.env.BUILD_DIR || '.next',
   webpack(config) {
     config.resolve.modules.push(__dirname); // 추가
     return config;
