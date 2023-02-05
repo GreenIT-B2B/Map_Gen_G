@@ -323,7 +323,7 @@ function tm2geo(srctype, inPt, outPt) {
     outPt.lng = lonCenters[srctype];
   }
 
-  outPt = transform(srctype, GEO, outPt);
+  outPt = transform(srctype, GT_GEO, outPt);
 
   return outPt;
 }
@@ -333,7 +333,7 @@ function geo2tm(dstType, inPt, outPt) {
   var x = 0.0;
   var y = 0.0;
 
-  inPt = transform(GEO, dstType, inPt);
+  inPt = transform(GT_GEO, dstType, inPt);
 
   const deltaLon = inPt.lng - lonCenters[dstType];
   const sinPhi = Math.sin(inPt.lat);
@@ -406,14 +406,14 @@ var convert = function convert(srcType, dstType, inPt) {
     height: 0.0,
   };
 
-  if (srcType == GEO) {
+  if (srcType == GT_GEO) {
     pointGeo1.lng = D2R(inPt.lng);
     pointGeo1.lat = D2R(inPt.lat);
   } else {
     pointGeo1 = tm2geo(srcType, inPt, pointGeo1);
   }
 
-  if (dstType == GEO) {
+  if (dstType == GT_GEO) {
     pointGeo2.lng = R2D(pointGeo1.lng);
     pointGeo2.lat = R2D(pointGeo1.lat);
   } else {
